@@ -1,54 +1,39 @@
-# Documentação do Sistema
+# Sistema de Gerenciamento de Tarefas
 
 ## 1) Visão Geral e Arquitetura do Sistema
-Este sistema é uma ferramenta de gerenciamento de tarefas que auxilia os usuários a organizarem suas atividades acadêmicas de forma eficiente. A arquitetura do sistema é baseada em uma estrutura de microserviços que permite a escalabilidade e manutenção ágil, utilizando tecnologias como Node.js para o backend e React para o frontend.
+Este sistema é projetado para gerenciar tarefas de maneira eficiente para instituições de ensino. A arquitetura é baseada em uma estrutura cliente-servidor, onde o frontend interage com o backend através de uma API RESTful, e o banco de dados é utilizado para persistir as informações.
 
-## 2) Histórico Completo de Mudanças
-- 
-2026-04-19  
-  - Adição do módulo de autenticação.
-  - Melhoria na interface do usuário.
-- 2026-02-10  
-  - Refatoração do código do backend.
-  - Implementação de novos endpoints API.
+## 2) Histórico Completo do Sistema
+O desenvolvimento deste sistema começou em janeiro de 2022, com o objetivo de simplificar o gerenciamento de tarefas. Desde então, várias versões foram implementadas, introduzindo funcionalidades como criação de tarefas, atribuição de usuários, e notificações.
 
-## 3) Diagrama BPMN para Fluxo de Gerenciamento de Tarefas
-![BPMN Diagram](link_do_diagrama)
+## 3) Diagrama BPMN para o Fluxo de Gerenciamento de Tarefas
+![BPMN Diagram](link-para-diagrama-bpmn)
 
 ## 4) Descrições Detalhadas dos Componentes
-- **Backend:** Responsável pela lógica de negócios e interação com o banco de dados. 
-- **Frontend:** Interface do usuário que permite interação e visualização de dados.
+- **Frontend**: Aplicação web desenvolvida em React.js.
+- **Backend**: APIs construídas com Node.js e Express.
+- **Banco de Dados**: MongoDB usado para armazenar dados da aplicação.
 
-## 5) Documentação dos Endpoints da API com Exemplos
-- `GET /tarefas`
-  - **Descrição:** Obtém todas as tarefas.
-  - **Exemplo de Resposta:** 
-    ```json
-    [{"id":1,"titulo":"Estudar para prova","status":"pendente"}]
-    ```
+## 5) Documentação Completa dos Endpoints da API com Exemplos
+- **GET /api/tarefas**: Retorna a lista de tarefas.
+  - Exemplo: `GET /api/tarefas`
+- **POST /api/tarefas**: Cria uma nova tarefa.
+  - Exemplo: `POST /api/tarefas {"titulo": "Nova Tarefa", "descricao": "Descrição da tarefa"}`
 
 ## 6) Esquema do Banco de Dados
-![Diagrama do Banco de Dados](link_do_diagrama)
+![Database Schema](link-para-esquema-banco)
 
 ## 7) Estrutura do Frontend
-```
-/ 
-├── src/
-│   ├── components/
-│   ├── pages/
-│   └── App.js
-└── public/
-```
+A estrutura do frontend é baseada em componentes React, organizados em pastas para facilitar a manutenção e escalabilidade.
 
 ## 8) Instruções de Configuração e Execução
-1) Clone o repositório: `git clone https://github.com/Im-Thaissa/gestao-tarefas-faculdade.git`
-2) Instale as dependências: `npm install`
-3) Execute o aplicativo: `npm start`
+1. Clone o repositório: `git clone <URL-do-repositório>`.
+2. Instale as dependências: `npm install`.
+3. Execute o projeto: `npm start`.
 
-## 9) Checklist de Conformidade de Requisitos
-| Requisito                      | Status    |
-|--------------------------------|-----------|
-| Autenticação de usuário        | Cumprido  |
-| Gerenciamento de tarefas       | Cumprido  |
-| Interface responsiva           | Cumprido  |
-| Relatório de tarefas           | Pendente  |
+## 9) Lista de Verificação de Conformidade com todos os Requisitos
+- [ ] Requisitos Funcionais implementados.
+- [ ] Requisitos Não Funcionais verificados.
+
+## 10) Conclusão
+Com este sistema, espera-se melhorar a produtividade do gerenciamento de tarefas, proporcionando uma interface simples e efetiva para os usuários.
