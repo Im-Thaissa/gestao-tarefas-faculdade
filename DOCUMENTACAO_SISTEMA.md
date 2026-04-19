@@ -1,34 +1,54 @@
-# DOCUMENTACAO_SISTEMA.md
+# Documentação do Sistema
 
-## 1) System Overview and Architecture
-- Description of the system's main functionalities and architecture.
+## 1) Visão Geral e Arquitetura do Sistema
+Este sistema é uma ferramenta de gerenciamento de tarefas que auxilia os usuários a organizarem suas atividades acadêmicas de forma eficiente. A arquitetura do sistema é baseada em uma estrutura de microserviços que permite a escalabilidade e manutenção ágil, utilizando tecnologias como Node.js para o backend e React para o frontend.
 
-## 2) Complete History of the System
-- Chronological documentation of changes, updates, and version history.
+## 2) Histórico Completo de Mudanças
+- 
+2026-04-19  
+  - Adição do módulo de autenticação.
+  - Melhoria na interface do usuário.
+- 2026-02-10  
+  - Refatoração do código do backend.
+  - Implementação de novos endpoints API.
 
-## 3) BPMN-style Activity Flow Diagram (ASCII format)
+## 3) Diagrama BPMN para Fluxo de Gerenciamento de Tarefas
+![BPMN Diagram](link_do_diagrama)
+
+## 4) Descrições Detalhadas dos Componentes
+- **Backend:** Responsável pela lógica de negócios e interação com o banco de dados. 
+- **Frontend:** Interface do usuário que permite interação e visualização de dados.
+
+## 5) Documentação dos Endpoints da API com Exemplos
+- `GET /tarefas`
+  - **Descrição:** Obtém todas as tarefas.
+  - **Exemplo de Resposta:** 
+    ```json
+    [{"id":1,"titulo":"Estudar para prova","status":"pendente"}]
+    ```
+
+## 6) Esquema do Banco de Dados
+![Diagrama do Banco de Dados](link_do_diagrama)
+
+## 7) Estrutura do Frontend
 ```
-+------------------+       +------------------+
-|   Start          |       |   End            |
-+------------------+       +------------------+
-        |                          |
-        v                          v
-+------------------+       +------------------+
-|   Activity 1     | ----> |   Activity 2     |
-+------------------+       +------------------+
+/ 
+├── src/
+│   ├── components/
+│   ├── pages/
+│   └── App.js
+└── public/
 ```
 
-## 4) Component Descriptions
-- Detailed descriptions of each system component and its role.
+## 8) Instruções de Configuração e Execução
+1) Clone o repositório: `git clone https://github.com/Im-Thaissa/gestao-tarefas-faculdade.git`
+2) Instale as dependências: `npm install`
+3) Execute o aplicativo: `npm start`
 
-## 5) API Endpoints Documentation
-- Detailed list of API endpoints, request types, and example responses.
-
-## 6) Database Schema
-- Description of the database schema with tables and their relationships.
-
-## 7) Frontend Structure and Components
-- Overview of the frontend structure and key components used.
-
-## 8) Setup and Run Instructions
-- Step-by-step guide on how to set up and run the application locally or in production.
+## 9) Checklist de Conformidade de Requisitos
+| Requisito                      | Status    |
+|--------------------------------|-----------|
+| Autenticação de usuário        | Cumprido  |
+| Gerenciamento de tarefas       | Cumprido  |
+| Interface responsiva           | Cumprido  |
+| Relatório de tarefas           | Pendente  |
